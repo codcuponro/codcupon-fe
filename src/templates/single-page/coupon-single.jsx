@@ -22,7 +22,7 @@ const CouponSingle = async ({singleStore, param}) => {
 
     const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
     const sortedCoupon = getSortedData(activeCoupon)
-    const dateLateUpdate = formatDate(sortedCoupon[0].publishedAt)
+    const dateLateUpdate = formatDate(sortedCoupon[0]?.publishedAt || singleStore?.updatedAt)
 
     const categories = getUniqueCategories(singleStore?.coupons_and_deals)
     const currentYear = new Date().getFullYear();
