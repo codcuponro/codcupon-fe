@@ -47,7 +47,7 @@ const SingleCategory = async ({ params }) => {
 
   return (
     <>
-      <CategorySingleTemp params={param} data={category} coupons={activeCoupon} categories={categories} />
+      <CategorySingleTemp params={param} data={category} coupons={activeCoupon.reverse()} categories={categories} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
