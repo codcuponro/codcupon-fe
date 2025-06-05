@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Title from '@/components/title/title';
 import Breadcrumb from '@/components/breadcrumb';
@@ -6,7 +7,9 @@ import StoreList from './StoreList'
 
 const breadcrumbPath = [{ label: 'magazine', href: '/Magazine' }];
 
-const StoresTemp = async ({ stores, favStores = [] }) => {
+const StoresTemp = ({ stores, favStores = [] }) => {
+  console.log("🚀 ~ StoresTemp ~ stores:", stores)
+
   return (
     <>
       <section className="mt-6 mb-10">

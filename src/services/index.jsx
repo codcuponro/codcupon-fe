@@ -154,17 +154,45 @@ async function getFavorites50Coupon() {
   return favoritesCoupon?.data
 }
 
+// async function getAllStore() {
+//   const params = qs.stringify({
+//     populate: [
+//       'Icon', "coupons_and_deals",
+//     ],
+//     pagination: {
+//       limit: 1000,
+//     }
+//   })
+//   const stores = await Request(`/stores?${params}`);
+//   return stores?.data
+// }
+
 async function getAllStore() {
-  const params = qs.stringify({
-    populate: [
-      'Icon', "coupons_and_deals",
-    ],
-    pagination: {
-      limit: 1000
-    }
-  })
-  const stores = await Request(`/stores?${params}`);
-  return stores?.data
+  let allStores = [];
+  let page = 1;
+  let pageSize = 100; // max value Strapi supports by default
+
+  while (true) {
+    const query = qs.stringify({
+      populate: ['Icon', 'coupons_and_deals'],
+      pagination: {
+        page,
+        pageSize,
+      },
+    });
+
+    const res = await Request(`/stores?${query}`);
+    const stores = res?.data || [];
+
+    allStores = [...allStores, ...stores];
+
+    const total = res?.meta?.pagination?.total || 0;
+    if (allStores.length >= total) break;
+
+    page++;
+  }
+
+  return allStores;
 }
 
 
