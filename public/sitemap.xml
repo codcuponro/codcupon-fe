@@ -2,305 +2,647 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
           <loc>https://www.codcupon.ro/despre-noi</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/fisiere-cookies</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/politica-confidentialitate</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/termeni-si-conditii</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/categorii</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/magazine</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/contact</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codcupon.ro/top-coduri-reducere</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-08-04T18:54:48+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       
         <url>
-          <loc>https://www.codcupon.ro/epantofi</loc>
-          <lastmod>2025-04-03T16:20:09.377Z</lastmod>
+          <loc>https://www.codcupon.ro/maxi-pet</loc>
+          <lastmod>2025-05-13T10:13:31.700Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/temu</loc>
-          <lastmod>2025-04-04T16:52:23.231Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/libris</loc>
-          <lastmod>2025-04-01T12:56:30.168Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/flanco</loc>
-          <lastmod>2025-04-03T16:01:52.020Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/pepita</loc>
-          <lastmod>2025-04-24T07:16:17.600Z</lastmod>
+          <loc>https://www.codcupon.ro/tuju</loc>
+          <lastmod>2025-05-13T12:12:13.660Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/dy-fashion</loc>
-          <lastmod>2025-04-03T16:46:08.200Z</lastmod>
+          <lastmod>2025-05-13T09:53:48.042Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/videt</loc>
-          <lastmod>2025-04-03T14:55:31.031Z</lastmod>
+          <loc>https://www.codcupon.ro/emag</loc>
+          <lastmod>2025-06-17T08:05:10.882Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/cupio</loc>
-          <lastmod>2025-04-03T16:14:11.208Z</lastmod>
+          <loc>https://www.codcupon.ro/picadili</loc>
+          <lastmod>2025-05-13T10:08:57.484Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/floria</loc>
-          <lastmod>2025-04-09T08:15:15.759Z</lastmod>
+          <lastmod>2025-05-13T09:57:44.658Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/nike</loc>
-          <lastmod>2025-04-24T07:34:22.751Z</lastmod>
+          <loc>https://www.codcupon.ro/vero-boutique</loc>
+          <lastmod>2025-05-13T12:12:31.821Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/maxi-pet</loc>
-          <lastmod>2025-04-03T16:51:15.725Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/uber</loc>
-          <lastmod>2025-04-07T16:31:01.977Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/fabio-pizza</loc>
-          <lastmod>2025-04-15T09:02:56.897Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/spring-farma</loc>
-          <lastmod>2025-04-01T10:24:33.660Z</lastmod>
+          <loc>https://www.codcupon.ro/librariile-humanitas</loc>
+          <lastmod>2025-07-04T19:00:45.576Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/sinsay</loc>
-          <lastmod>2025-04-01T13:04:50.681Z</lastmod>
+          <lastmod>2025-06-22T20:45:42.586Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/dr-max</loc>
-          <lastmod>2025-04-01T10:19:08.539Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/spy-shop</loc>
-          <lastmod>2025-04-03T15:15:07.133Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/automobilus</loc>
-          <lastmod>2025-04-09T20:21:56.721Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/gymbeam</loc>
-          <lastmod>2025-04-15T11:24:55.373Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/startco</loc>
-          <lastmod>2025-04-03T16:56:36.889Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/modivo</loc>
-          <lastmod>2025-04-01T13:21:17.237Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/sezamo</loc>
-          <lastmod>2025-04-03T15:25:32.087Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/bookzone</loc>
-          <lastmod>2025-04-15T09:18:31.778Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/trendyol</loc>
-          <lastmod>2025-04-15T11:25:18.116Z</lastmod>
+          <loc>https://www.codcupon.ro/petmax</loc>
+          <lastmod>2025-05-13T10:09:13.361Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/about-you-outlet</loc>
-          <lastmod>2025-04-01T13:23:13.234Z</lastmod>
+          <lastmod>2025-05-13T09:46:28.767Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/dormia</loc>
-          <lastmod>2025-04-11T08:53:25.692Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/eyerim</loc>
-          <lastmod>2025-04-03T15:35:05.841Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/hm</loc>
-          <lastmod>2025-04-15T09:19:02.331Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/answear</loc>
-          <lastmod>2025-04-16T10:31:48.818Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codcupon.ro/garmin</loc>
-          <lastmod>2025-04-02T09:32:40.434Z</lastmod>
+          <loc>https://www.codcupon.ro/automobilus</loc>
+          <lastmod>2025-05-13T09:48:31.984Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/car-hero</loc>
-          <lastmod>2025-04-01T10:48:34.858Z</lastmod>
+          <lastmod>2025-05-13T09:50:00.676Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/ccc</loc>
-          <lastmod>2025-04-03T15:44:05.950Z</lastmod>
+          <loc>https://www.codcupon.ro/epantofi</loc>
+          <lastmod>2025-06-25T07:15:23.808Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/minunea-naturii</loc>
-          <lastmod>2025-04-08T16:41:56.217Z</lastmod>
+          <loc>https://www.codcupon.ro/marionnaud</loc>
+          <lastmod>2025-05-13T10:13:47.489Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/fashion-days</loc>
-          <lastmod>2025-04-11T12:55:21.295Z</lastmod>
+          <loc>https://www.codcupon.ro/noriel</loc>
+          <lastmod>2025-05-14T08:11:02.052Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/my-protein</loc>
-          <lastmod>2025-04-16T13:55:09.909Z</lastmod>
+          <loc>https://www.codcupon.ro/evomag</loc>
+          <lastmod>2025-05-20T12:03:29.430Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/axa-romania</loc>
-          <lastmod>2025-04-01T10:57:19.497Z</lastmod>
+          <loc>https://www.codcupon.ro/modivo</loc>
+          <lastmod>2025-06-25T07:15:54.911Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/la-fantana</loc>
-          <lastmod>2025-04-01T12:56:08.477Z</lastmod>
+          <loc>https://www.codcupon.ro/robazar</loc>
+          <lastmod>2025-07-04T19:04:34.179Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/bolt</loc>
-          <lastmod>2025-04-04T16:51:53.460Z</lastmod>
+          <loc>https://www.codcupon.ro/manuka-shop</loc>
+          <lastmod>2025-05-13T10:15:07.217Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/lensa</loc>
-          <lastmod>2025-04-03T14:46:55.005Z</lastmod>
+          <loc>https://www.codcupon.ro/maxtools</loc>
+          <lastmod>2025-07-04T19:08:23.632Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/carturesti</loc>
-          <lastmod>2025-04-03T15:59:42.742Z</lastmod>
+          <loc>https://www.codcupon.ro/minikids</loc>
+          <lastmod>2025-05-27T07:55:36.299Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/kit-unghii</loc>
-          <lastmod>2025-04-01T10:21:07.530Z</lastmod>
+          <loc>https://www.codcupon.ro/ecovent</loc>
+          <lastmod>2025-05-13T09:54:14.228Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/intimax</loc>
-          <lastmod>2025-04-08T16:44:03.514Z</lastmod>
+          <loc>https://www.codcupon.ro/eyerim</loc>
+          <lastmod>2025-05-13T09:56:04.402Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/footshop</loc>
+          <lastmod>2025-05-13T09:57:57.252Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/answear</loc>
+          <lastmod>2025-05-13T09:47:27.770Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/salamander-shop</loc>
+          <lastmod>2025-07-06T17:43:20.893Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/cartepedia</loc>
+          <lastmod>2025-07-06T17:46:43.776Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codcupon.ro/cropp</loc>
-          <lastmod>2025-04-19T18:35:11.818Z</lastmod>
+          <lastmod>2025-05-13T09:51:12.875Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/luxury-beauty</loc>
+          <lastmod>2025-05-13T10:15:20.761Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/eden-boutique</loc>
+          <lastmod>2025-05-13T09:54:28.032Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/nemira</loc>
+          <lastmod>2025-07-06T17:52:41.337Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/electrolux</loc>
+          <lastmod>2025-05-13T09:54:41.982Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/elefant</loc>
+          <lastmod>2025-05-13T09:54:55.067Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/aronia-charlottenburg</loc>
+          <lastmod>2025-05-13T09:47:41.409Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/esteto</loc>
+          <lastmod>2025-05-13T09:55:35.487Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/notino</loc>
+          <lastmod>2025-06-09T06:47:56.845Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/litera</loc>
+          <lastmod>2025-05-13T10:15:54.783Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/ihunt</loc>
+          <lastmod>2025-07-06T17:56:07.467Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/sephora</loc>
+          <lastmod>2025-06-10T09:40:27.385Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/liki24</loc>
+          <lastmod>2025-05-13T10:16:08.208Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/fabio-pizza</loc>
+          <lastmod>2025-05-13T09:56:20.035Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/eurocauciucuri</loc>
+          <lastmod>2025-05-14T09:23:13.970Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/carturesti</loc>
+          <lastmod>2025-05-13T09:50:14.542Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/chilipirul-zilei</loc>
+          <lastmod>2025-05-13T09:50:56.885Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/lounge-by-zalando</loc>
+          <lastmod>2025-06-16T11:25:30.988Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/europroduse</loc>
+          <lastmod>2025-07-06T18:00:56.436Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/cumpara-misim</loc>
+          <lastmod>2025-07-19T11:48:30.588Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/iabilet</loc>
+          <lastmod>2025-05-13T10:16:32.221Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/gave</loc>
+          <lastmod>2025-05-13T09:58:22.886Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/petmart</loc>
+          <lastmod>2025-05-13T10:09:27.982Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/zappatos</loc>
+          <lastmod>2025-07-06T18:04:58.657Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/xxxlutz</loc>
+          <lastmod>2025-07-19T11:53:19.763Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/lunzo</loc>
+          <lastmod>2025-05-14T09:59:27.561Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/fara-daunatori</loc>
+          <lastmod>2025-07-06T18:08:13.681Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/ivistyle</loc>
+          <lastmod>2025-05-13T10:17:12.079Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/libris</loc>
+          <lastmod>2025-05-13T10:19:20.063Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/sizeer</loc>
+          <lastmod>2025-05-14T10:05:19.029Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/jollymag</loc>
+          <lastmod>2025-05-28T07:10:28.990Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/pepita</loc>
+          <lastmod>2025-06-16T17:31:40.362Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/editura-corint</loc>
+          <lastmod>2025-07-06T18:34:25.778Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/fabrica-de-gratare</loc>
+          <lastmod>2025-05-13T09:56:34.533Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/flanco</loc>
+          <lastmod>2025-05-13T09:57:32.732Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/jd-sports</loc>
+          <lastmod>2025-05-13T10:17:28.920Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/vivantis</loc>
+          <lastmod>2025-05-14T10:11:09.815Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/keida</loc>
+          <lastmod>2025-05-28T07:11:13.268Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/intimax</loc>
+          <lastmod>2025-06-16T17:35:07.899Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/craft-up</loc>
+          <lastmod>2025-07-06T18:37:45.944Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/car-supreme</loc>
+          <lastmod>2025-07-19T11:59:31.080Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/autonest</loc>
+          <lastmod>2025-05-14T10:29:28.359Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/bioesential</loc>
+          <lastmod>2025-05-14T10:29:42.444Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/farmec</loc>
+          <lastmod>2025-05-13T09:57:01.540Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/gymbeam</loc>
+          <lastmod>2025-05-13T09:59:01.733Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/pet-magazin</loc>
+          <lastmod>2025-05-13T10:09:42.822Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/pentru-animale</loc>
+          <lastmod>2025-05-13T10:10:12.744Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/kaffetop</loc>
+          <lastmod>2025-05-28T07:11:35.657Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/kfea</loc>
+          <lastmod>2025-05-13T10:17:47.163Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/hikari-knife</loc>
+          <lastmod>2025-05-14T10:30:12.571Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/naprotect</loc>
+          <lastmod>2025-05-14T10:31:26.433Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/sportera</loc>
+          <lastmod>2025-05-28T07:12:00.642Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/craft-mystic</loc>
+          <lastmod>2025-07-06T18:40:36.676Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/fashion-days</loc>
+          <lastmod>2025-05-13T09:57:18.020Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/jet2go</loc>
+          <lastmod>2025-05-14T10:30:33.698Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/cupio</loc>
+          <lastmod>2025-05-13T09:51:26.843Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/patronos</loc>
+          <lastmod>2025-05-13T10:10:27.286Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/marele-pescar</loc>
+          <lastmod>2025-06-16T17:47:04.952Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/jocozaur</loc>
+          <lastmod>2025-05-14T10:30:55.154Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/universul-luminii</loc>
+          <lastmod>2025-07-03T04:05:09.635Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/altex</loc>
+          <lastmod>2025-06-16T17:49:06.865Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/nails-up</loc>
+          <lastmod>2025-07-06T18:43:37.254Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/garmin</loc>
+          <lastmod>2025-05-13T09:58:10.521Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/kit-unghii</loc>
+          <lastmod>2025-05-13T10:18:21.581Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/scenta</loc>
+          <lastmod>2025-05-14T10:31:52.571Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/genius-nutrition</loc>
+          <lastmod>2025-05-13T09:58:35.424Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/la-fantana</loc>
+          <lastmod>2025-05-13T10:18:36.211Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/dormia</loc>
+          <lastmod>2025-05-13T09:52:12.515Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/frootya</loc>
+          <lastmod>2025-05-14T13:42:08.145Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/ccc</loc>
+          <lastmod>2025-07-04T07:14:24.484Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/dr-max</loc>
+          <lastmod>2025-06-16T17:51:53.313Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/obio</loc>
+          <lastmod>2025-07-06T18:45:53.744Z</lastmod>
           <priority>0.80</priority>
         </url>
       
@@ -330,14 +672,14 @@
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/categorii/adult</loc>
-          <lastmod>2025-04-09T07:57:31.948Z</lastmod>
+          <loc>https://www.codcupon.ro/categorii/casa-si-gradina</loc>
+          <lastmod>2025-05-16T10:06:20.676Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codcupon.ro/categorii/casa-si-gradina</loc>
-          <lastmod>2025-04-04T07:53:32.952Z</lastmod>
+          <loc>https://www.codcupon.ro/categorii/adult</loc>
+          <lastmod>2025-04-09T07:57:31.948Z</lastmod>
           <priority>0.80</priority>
         </url>
       
@@ -379,7 +721,7 @@
       
         <url>
           <loc>https://www.codcupon.ro/categorii/copii-si-bebelusi</loc>
-          <lastmod>2025-04-04T08:18:02.632Z</lastmod>
+          <lastmod>2025-05-16T10:08:51.850Z</lastmod>
           <priority>0.80</priority>
         </url>
       
@@ -464,6 +806,42 @@
         <url>
           <loc>https://www.codcupon.ro/categorii/evenimente-si-divertisment</loc>
           <lastmod>2025-04-04T17:01:00.442Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/sanatate</loc>
+          <lastmod>2025-04-30T09:21:28.743Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/hobby</loc>
+          <lastmod>2025-05-07T15:40:22.135Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/bricolaj</loc>
+          <lastmod>2025-05-16T10:07:08.086Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/constructii</loc>
+          <lastmod>2025-05-16T10:07:25.948Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/jucarii</loc>
+          <lastmod>2025-05-16T10:07:47.598Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codcupon.ro/categorii/online-mall</loc>
+          <lastmod>2025-05-28T10:22:58.422Z</lastmod>
           <priority>0.80</priority>
         </url>
       
