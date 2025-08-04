@@ -230,7 +230,7 @@ async function getAllCategories() {
 async function getSingleCategory(param) {
   const cparams = qs.stringify({
     populate: [
-      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
+      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social", "id"
     ],
     filters: {
       Slug: {
