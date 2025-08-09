@@ -3,6 +3,8 @@ import { Request } from "@/config/Axios";
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import qs from "qs";
+import { logout } from "@/services/auth";
+import { useRouter } from "next/navigation";
 
 const Upload = () => {
   const [data, setData] = useState<any[]>([]);
@@ -15,6 +17,7 @@ const Upload = () => {
   const [errorList, setErrorList] = useState<
     { row: number; error: string; data: any }[]
   >([]);
+  const router = useRouter();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -156,101 +159,113 @@ const Upload = () => {
     );
   };
 
+  const handleLogout = () => {
+    logout();
+    router.push("/login");
+  };
+
   return (
-    <section className="container mx-auto px-3 py-20">
-      <h2 className="text-xl font-semibold mb-4">Upload Excel Sheet</h2>
+    <>
+      <section className="container mx-auto flex justify-end px-3 pt-20">
+        <button onClick={handleLogout} className="underline">Logout</button>
+      </section>
 
-      <input
-        type="file"
-        accept=".xlsx, .xls"
-        onChange={handleFileUpload}
-        className="mb-6"
-      />
+      <section className="container mx-auto px-3 py-20">
+        <h2 className="text-xl font-semibold mb-4">Upload Excel Sheet</h2>
+        <input
+          type="file"
+          accept=".xlsx, .xls"
+          onChange={handleFileUpload}
+          className="mb-6"
+        />
 
-      {data.length > 0 && (
-        <>
-          <button
-            onClick={handleUploadAll}
-            disabled={uploading}
-            className="px-5 py-2 mb-4 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
-          >
-            {uploading ? "Uploading..." : "Upload All Data"}
-          </button>
+        {data.length > 0 && (
+          <>
+            <button
+              onClick={handleUploadAll}
+              disabled={uploading}
+              className="px-5 py-2 mb-4 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+            >
+              {uploading ? "Uploading..." : "Upload All Data"}
+            </button>
 
-          {uploading && (
-            <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
-              <div
-                className="bg-blue-600 h-4 rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-          )}
-
-          {responseMessage && <p className="mb-6 text-sm">{responseMessage}</p>}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-medium text-green-700 mb-2">
-                ✅ Successfully Uploaded ({successList.length})
-              </h3>
-              <div className="bg-green-50 p-3 rounded text-sm max-h-64 overflow-y-auto space-y-2">
-                {successList.length > 0 ? (
-                  successList.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-green-100 p-2 rounded border border-green-200"
-                    >
-                      <strong>Coupon {item?.index + 1}:</strong>{" "}
-                      {item?.data.data?.Title}
-                      <div className="text-xs text-green-600 mt-1">
-                        ID: {item?.data.data?.id}
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-gray-500">No successful uploads yet</p>
-                )}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-red-700 mb-2">
-                ❌ Failed Uploads ({errorList.length})
-              </h3>
-              <div className="bg-red-50 p-3 rounded text-sm max-h-64 overflow-y-auto space-y-2">
-                {errorList.length > 0 ? (
-                  errorList.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-red-100 p-2 rounded border border-red-200"
-                    >
-                      <strong>Coupon {item?.row}:</strong> {item?.data.Title}
-                      <div className="text-xs text-red-600 mt-1">
-                        Error: {item?.error}
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-gray-500">No failed uploads yet</p>
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6">
-            <h3 className="font-medium text-lg mb-2">Parsed Data Preview:</h3>
-            <pre className="bg-gray-100 p-4 rounded overflow-x-auto text-sm max-h-64">
-              {JSON.stringify(data.slice(0, 5), null, 2)}
-            </pre>
-            {data.length > 5 && (
-              <div className="text-gray-500 mt-2">
-                ... and {data.length - 5} more items
+            {uploading && (
+              <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
+                <div
+                  className="bg-blue-600 h-4 rounded-full transition-all duration-300 ease-out"
+                  style={{ width: `${progress}%` }}
+                ></div>
               </div>
             )}
-          </div>
-        </>
-      )}
-    </section>
+
+            {responseMessage && (
+              <p className="mb-6 text-sm">{responseMessage}</p>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-medium text-green-700 mb-2">
+                  ✅ Successfully Uploaded ({successList.length})
+                </h3>
+                <div className="bg-green-50 p-3 rounded text-sm max-h-64 overflow-y-auto space-y-2">
+                  {successList.length > 0 ? (
+                    successList.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="bg-green-100 p-2 rounded border border-green-200"
+                      >
+                        <strong>Coupon {item?.index + 1}:</strong>{" "}
+                        {item?.data.data?.Title}
+                        <div className="text-xs text-green-600 mt-1">
+                          ID: {item?.data.data?.id}
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="text-gray-500">No successful uploads yet</p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-red-700 mb-2">
+                  ❌ Failed Uploads ({errorList.length})
+                </h3>
+                <div className="bg-red-50 p-3 rounded text-sm max-h-64 overflow-y-auto space-y-2">
+                  {errorList.length > 0 ? (
+                    errorList.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="bg-red-100 p-2 rounded border border-red-200"
+                      >
+                        <strong>Coupon {item?.row}:</strong> {item?.data.Title}
+                        <div className="text-xs text-red-600 mt-1">
+                          Error: {item?.error}
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="text-gray-500">No failed uploads yet</p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="font-medium text-lg mb-2">Parsed Data Preview:</h3>
+              <pre className="bg-gray-100 p-4 rounded overflow-x-auto text-sm max-h-64">
+                {JSON.stringify(data.slice(0, 5), null, 2)}
+              </pre>
+              {data.length > 5 && (
+                <div className="text-gray-500 mt-2">
+                  ... and {data.length - 5} more items
+                </div>
+              )}
+            </div>
+          </>
+        )}
+      </section>
+    </>
   );
 };
 
