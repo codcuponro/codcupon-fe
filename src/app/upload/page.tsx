@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 
 const Upload = () => {
   const [data, setData] = useState<any[]>([]);
+  console.log("🚀 ~ Upload ~ data:", data);
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [responseMessage, setResponseMessage] = useState("");
@@ -27,7 +28,16 @@ const Upload = () => {
 
     reader.onload = (evt: any) => {
       const bstr = evt.target.result;
-      const workbook = XLSX.read(bstr, { type: "binary" });
+      let workbook;
+
+      if (file.name.endsWith(".csv")) {
+        // CSV file parsing
+        workbook = XLSX.read(bstr, { type: "binary" });
+      } else {
+        // Excel file parsing
+        workbook = XLSX.read(bstr, { type: "binary" });
+      }
+
       const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
       const jsonData = XLSX.utils.sheet_to_json(sheet);
@@ -38,33 +48,60 @@ const Upload = () => {
       setResponseMessage("");
     };
 
+    // For CSV, read as binary string still works fine with XLSX
     reader.readAsBinaryString(file);
   };
 
   const uploadToStrapi = async (item: any, index: number) => {
-    let store;
-    let category;
+    let store, category;
+    if (item?.Store) {
+      store = await findOrCreate("stores", item.Store);
+    }
+    if (item?.Categories) {
+      category = await findOrCreate("categories", item.Categories);
+    }
 
-    if (item?.store) {
-      const sParams = qs.stringify({
-        filters: {
-          Slug: {
-            $eq: item?.store?.toLowerCase()?.replace(/ /g, "-"),
-          },
-        },
-      });
-      store = await Request(`/stores?${sParams}`);
-    }
-    if (item?.categories) {
-      const cParams = qs.stringify({
-        filters: {
-          Slug: {
-            $eq: item.categories.toLowerCase().replace(/ /g, "-"),
-          },
-        },
-      });
-      category = await Request(`/categories?${cParams}`);
-    }
+    console.log("🚀 ~ uploadToStrapi ~ store, category:", store, category)
+
+    // if (item?.Store) {
+    //   const sParams = qs.stringify({
+    //     filters: {
+    //       Slug: {
+    //         $eq: item?.Store?.toLowerCase()?.replace(/ /g, "-"),
+    //       },
+    //     },
+    //   });
+    //   store = await Request(`/stores?${sParams}`);
+    //    // If store doesn't exist → create it
+    //   if (!store?.data?.length) {
+    //     const newStore = await Request(`/stores`, {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+    //       },
+    //       body: JSON.stringify({
+    //         data: {
+    //           Name: item?.Store,
+    //           Slug: item?.Store?.toLowerCase()
+    //             .replace(/[^a-z0-9\s-]/g, "")
+    //             .replace(/\s+/g, "-"),
+    //         },
+    //       }),
+    //     });
+    //     store = newStore;
+    //   }
+    // }
+    // if (item?.Categories) {
+    //   const cParams = qs.stringify({
+    //     filters: {
+    //       Slug: {
+    //         $eq: item.Categories.toLowerCase().replace(/ /g, "-"),
+    //       },
+    //     },
+    //   });
+    //   category = await Request(`/categories?${cParams}`);
+    // }
 
     try {
       const res = await Request(`/coupons-and-deals`, {
@@ -76,26 +113,30 @@ const Upload = () => {
         body: JSON.stringify({
           data: {
             Title: item?.Title,
-            ShortInfo: item?.ShortInfo,
-            Slug: item?.Slug?.replace(/ /g, "-").toLowerCase(),
-            Description: item?.Description,
-            CouponsType: item?.CouponsType,
-            CouponCode: `${item?.CouponCode}`,
-            CouponUrl: item?.CouponUrl,
-            ExpireDate: item?.ExpireDate,
-            StartDate: item?.StartDate,
-            DiscountValue: `${item?.DiscountValue}`,
-            FavoritesCoupon: item?.FavoritesCoupon,
-            NumberOfCouponUsed: item?.NumberOfCouponUsed,
-            categories: category?.data[0]?.documentId,
-            store: store?.data[0]?.documentId,
-            Feature_image: item?.Feature_image,
-            Rating: item?.Rating,
-            Slider: item?.Slider,
+            // ShortInfo: item?.ShortInfo,
+            Slug: item?.Title?.toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, "") // remove special characters
+              .replace(/\s+/g, "-") // replace spaces with hyphen
+              .replace(/-+/g, "-") // remove multiple hyphens
+              .replace(/^-|-$/g, ""), // trim starting/ending hyphen
+            // Description: item?.Description,
+            CouponsType:
+              item?.["Coupon Type"] === "code" ? "Coupon Code" : "Promotion",
+            CouponCode: item?.["Coupon Code"],
+            // CouponUrl: item?.CouponUrl,
+            ExpireDate: formatDateToYMD(item?.Expires), //Accepted Formate: 2026-07-27
+            // StartDate: item?.StartDate,
+            DiscountValue: item?.["Discount Value"],
+            // FavoritesCoupon: item?.FavoritesCoupon,
+            NumberOfCouponUsed: item?.["Number Coupon Used"],
+            categories: category?.documentId,
+            store: store?.documentId,
+            // Feature_image: item?.Feature_image,
+            // Rating: item?.Rating,
+            // Slider: item?.Slider,
           },
         }),
       });
-
       // ✅ Only return success if data contains ID
       if (!res || !res.data || !res.data.id) {
         return {
@@ -105,7 +146,6 @@ const Upload = () => {
           index,
         };
       }
-
       return { success: true, data: res, index };
     } catch (error: any) {
       return {
@@ -167,14 +207,16 @@ const Upload = () => {
   return (
     <>
       <section className="container mx-auto flex justify-end px-3 pt-20">
-        <button onClick={handleLogout} className="underline">Logout</button>
+        <button onClick={handleLogout} className="underline">
+          Logout
+        </button>
       </section>
 
       <section className="container mx-auto px-3 py-20">
         <h2 className="text-xl font-semibold mb-4">Upload Excel Sheet</h2>
         <input
           type="file"
-          accept=".xlsx, .xls"
+          accept=".xlsx, .xls, .csv"
           onChange={handleFileUpload}
           className="mb-6"
         />
@@ -270,3 +312,49 @@ const Upload = () => {
 };
 
 export default Upload;
+
+function formatDateToYMD(dateStr: any) {
+  const date: any = new Date(dateStr.split("/").reverse().join("-"));
+  // Handles DD/MM/YYYY → YYYY-MM-DD
+  if (isNaN(date)) {
+    throw new Error("Invalid date format");
+  }
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+const findOrCreate = async (type: any, title: any) => {
+  const slug = title
+    ?.toLowerCase()
+    ?.replace(/[^a-z0-9\s-]/g, "") // remove special chars
+    ?.replace(/\s+/g, "-");
+  let data;
+  const params = qs.stringify({
+    filters: {
+      Slug: { $eq: slug },
+    },
+  });
+  let res = await Request(`/${type}?${params}`);
+  data = res?.data?.[0];
+  // If not found, create it
+  if (!res?.data?.length) {
+    const created = await Request(`/${type}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+      },
+      body: JSON.stringify({
+        data: {
+          Name: title,
+          Slug: slug,
+        },
+      }),
+    });
+    data = created.data;
+  }
+
+  return data;
+};

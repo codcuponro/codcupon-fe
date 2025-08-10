@@ -20,5 +20,6 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/upload', '/login'],
+  // matcher: ['/upload', '/login'],
+  matcher: [],
 };
