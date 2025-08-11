@@ -62,47 +62,7 @@ const Upload = () => {
     }
 
     console.log("🚀 ~ uploadToStrapi ~ store, category:", store, category)
-
-    // if (item?.Store) {
-    //   const sParams = qs.stringify({
-    //     filters: {
-    //       Slug: {
-    //         $eq: item?.Store?.toLowerCase()?.replace(/ /g, "-"),
-    //       },
-    //     },
-    //   });
-    //   store = await Request(`/stores?${sParams}`);
-    //    // If store doesn't exist → create it
-    //   if (!store?.data?.length) {
-    //     const newStore = await Request(`/stores`, {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-    //       },
-    //       body: JSON.stringify({
-    //         data: {
-    //           Name: item?.Store,
-    //           Slug: item?.Store?.toLowerCase()
-    //             .replace(/[^a-z0-9\s-]/g, "")
-    //             .replace(/\s+/g, "-"),
-    //         },
-    //       }),
-    //     });
-    //     store = newStore;
-    //   }
-    // }
-    // if (item?.Categories) {
-    //   const cParams = qs.stringify({
-    //     filters: {
-    //       Slug: {
-    //         $eq: item.Categories.toLowerCase().replace(/ /g, "-"),
-    //       },
-    //     },
-    //   });
-    //   category = await Request(`/categories?${cParams}`);
-    // }
-
+    
     try {
       const res = await Request(`/coupons-and-deals`, {
         method: "POST",

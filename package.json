@@ -15,7 +15,6 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.5",
     "@strapi/blocks-react-renderer": "^1.0.2",
-    "axios": "^1.11.0",
     "husky": "^9.1.7",
     "js-cookie": "^3.0.5",
     "next": "14.2.3",
