@@ -61,8 +61,6 @@ const Upload = () => {
       category = await findOrCreate("categories", item.Categories);
     }
 
-    console.log("🚀 ~ uploadToStrapi ~ store, category:", store, category)
-    
     try {
       const res = await Request(`/coupons-and-deals`, {
         method: "POST",
@@ -94,6 +92,7 @@ const Upload = () => {
             // Feature_image: item?.Feature_image,
             // Rating: item?.Rating,
             // Slider: item?.Slider,
+            publishedAt: null,
           },
         }),
       });
