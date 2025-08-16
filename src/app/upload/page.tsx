@@ -66,7 +66,7 @@ const Upload = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+          Authorization: `Bearer b440b6c22fb582de1f3cdd829e3abb205a8d7d35c519befd730ea9f32aad47b356c7b38c93642cb50a93d0d591e0391414d253d2112b903ad4d9057840d8716ac0e706688bf851a53866293f38dd32cac07d096c4ca6f89c0ee18752255213359a793e25029e8098a0c4ecc3660af626f1ead8f9522da8ba6fe85fd2b68ad0e3`,
         },
         body: JSON.stringify({
           data: {
