@@ -100,7 +100,7 @@ const Upload = () => {
       if (!res || !res.data || !res.data.id) {
         return {
           success: false,
-          error: "Invalid response structure or missing ID",
+          error: res?.error?.message || "Invalid response structure or missing ID",
           data: item,
           index,
         };
