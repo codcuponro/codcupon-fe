@@ -3,7 +3,7 @@ name: Cron Job Trigger & Deploy
 on:
   schedule:
     # Runs every day at midnight UTC
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch: # Allows manual trigger
 
 jobs:
