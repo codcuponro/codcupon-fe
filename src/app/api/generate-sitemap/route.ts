@@ -16,13 +16,22 @@ const Request = async (endpoint: string, options: any = {}) => {
 
 function getFormattedDateTime() {
   const now = new Date();
-  const isoString = now.toISOString();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+
   const offsetMinutes = now.getTimezoneOffset();
   const sign = offsetMinutes > 0 ? "-" : "+";
-  const offsetHours = String(Math.abs(offsetMinutes / 60)).padStart(2, "0");
-  const offsetMins = String(Math.abs(offsetMinutes % 60)).padStart(2, "0");
-  return isoString.slice(0, 19) + sign + offsetHours + ":" + offsetMins;
+  const offsetHours = String(Math.floor(Math.abs(offsetMinutes) / 60)).padStart(2, "0");
+  const offsetMins = String(Math.abs(offsetMinutes) % 60).padStart(2, "0");
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${sign}${offsetHours}:${offsetMins}`;
 }
+
 
 const categoryParams = qs.stringify({ pagination: { limit: 2000 } });
 const storeParams = qs.stringify({ pagination: { limit: 2000 } });

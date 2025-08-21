@@ -20,16 +20,24 @@ const Request = async (endpoint, options = {}) => {
     }
 };
 function getFormattedDateTime() {
-    const now = new Date();
-    const isoString = now.toISOString(); // Example: 2023-05-11T19:00:11.123Z
+  const now = new Date();
 
-    const offsetMinutes = now.getTimezoneOffset();
-    const sign = offsetMinutes > 0 ? "-" : "+";
-    const offsetHours = String(Math.abs(offsetMinutes / 60)).padStart(2, "0");
-    const offsetMins = String(Math.abs(offsetMinutes % 60)).padStart(2, "0");
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    return isoString.slice(0, 19) + sign + offsetHours + ":" + offsetMins;
+  const offsetMinutes = now.getTimezoneOffset();
+  const sign = offsetMinutes > 0 ? "-" : "+";
+  const offsetHours = String(Math.floor(Math.abs(offsetMinutes) / 60)).padStart(2, "0");
+  const offsetMins = String(Math.abs(offsetMinutes) % 60).padStart(2, "0");
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${sign}${offsetHours}:${offsetMins}`;
 }
+
+
 
 const categoryParams = qs.stringify({
     pagination: {
@@ -100,7 +108,7 @@ async function generateSitemap() {
       ${stores?.data?.map((item) => `
         <url>
           <loc>${SITE_URL}/${item?.Slug}</loc>
-          <lastmod>${item?.updatedAt}</lastmod>
+          <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>0.80</priority>
         </url>
       `).join("")}
