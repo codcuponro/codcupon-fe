@@ -1,0 +1,111 @@
+// app/api/generate-sitemap/route.ts
+import fs from "fs";
+import qs from "qs";
+
+const SITE_URL = "https://www.codcupon.ro";
+
+const Request = async (endpoint: string, options: any = {}) => {
+  const url = `https://king-prawn-app-tflmf.ondigitalocean.app/api${endpoint}`;
+  const response = await fetch(url, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    ...options,
+  });
+  return await response.json();
+};
+
+function getFormattedDateTime() {
+  const now = new Date();
+  const isoString = now.toISOString();
+  const offsetMinutes = now.getTimezoneOffset();
+  const sign = offsetMinutes > 0 ? "-" : "+";
+  const offsetHours = String(Math.abs(offsetMinutes / 60)).padStart(2, "0");
+  const offsetMins = String(Math.abs(offsetMinutes % 60)).padStart(2, "0");
+  return isoString.slice(0, 19) + sign + offsetHours + ":" + offsetMins;
+}
+
+const categoryParams = qs.stringify({ pagination: { limit: 2000 } });
+const storeParams = qs.stringify({ pagination: { limit: 2000 } });
+
+export async function GET() {
+  try {
+    const stores = await Request(`/stores?${storeParams}`);
+    const categories = await Request(`/categories?${categoryParams}`);
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>${SITE_URL}/</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/despre-noi</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/fisiere-cookies</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/politica-confidentialitate</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/termeni-si-conditii</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/categorii</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/magazine</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/contact</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>${SITE_URL}/top-coduri-reducere</loc>
+      <lastmod>${getFormattedDateTime()}</lastmod>
+      <priority>1.00</priority>
+    </url>
+    ${stores?.data
+      ?.map(
+        (item:any) => `
+      <url>
+        <loc>${SITE_URL}/${item?.Slug}</loc>
+        <lastmod>${item?.updatedAt}</lastmod>
+        <priority>0.80</priority>
+      </url>`
+      )
+      .join("")}
+    ${categories?.data
+      ?.map(
+        (item:any) => `
+      <url>
+        <loc>${SITE_URL}/categorii/${item?.Slug}</loc>
+        <lastmod>${item?.updatedAt}</lastmod>
+        <priority>0.80</priority>
+      </url>`
+      )
+      .join("")}
+  </urlset>
+  `;
+
+    fs.writeFileSync("public/sitemap.xml", sitemap);
+
+    return Response.json({ message: "Sitemap generated!" });
+  } catch (err: any) {
+    return Response.json({ error: err.message }, { status: 500 });
+  }
+}
