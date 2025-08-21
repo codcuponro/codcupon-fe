@@ -1,16 +1,19 @@
-name: Cron Job Trigger
+name: Cron Job Trigger & Deploy
 
 on:
   schedule:
-    # This schedule runs the workflow every Sunday at midnight UTC
-    - cron: '*0 0 * * *'
+    # Runs every day at midnight UTC
+    - cron: "*/5 * * * *"
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
-  trigger-cron-job:
+  cron-deploy-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Make HTTP request to trigger cron job
+      - name: Run Sitemap Generator API
         run: |
           curl -X GET https://www.codcupon.ro/api/generate-sitemap
-        # You can add headers if needed (e.g., for authentication)
-        # curl -X GET https://yourdomain.com/api/cron -H "Authorization: Bearer <your-token>"
+
+      - name: Trigger Vercel Deploy Hook
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_Ln4ly5njEONBn7A6jyNUC1OdPqPy/l5NQ3nlpyu"
