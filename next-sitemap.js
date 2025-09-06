@@ -109,7 +109,7 @@ async function generateSitemap() {
         <url>
           <loc>${SITE_URL}/${item?.Slug}</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
-          <priority>0.80</priority>
+          <priority>1.00</priority>
         </url>
       `).join("")}
       ${categories?.data?.map((item) => `
