@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 const manrope = Manrope({ subsets: ['latin'] })
 
@@ -35,6 +36,21 @@ export default async function RootLayout({
 
   return (
     <html lang="ro">
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L3XDL4Y63H"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L3XDL4Y63H');
+          `}
+        </Script>
+      </head>
       <body
         className={`${manrope.className} antialiased`}
       >
